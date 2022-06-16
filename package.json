@@ -1,0 +1,32 @@
+{
+  "name": "Postgres",
+  "version": "1.0.0",
+  "description": "This Repo is an introduction to databases using Postgres",
+  "main": "server.js",
+  "scripts": {
+    "db:create": "createdb db_class_lecture",
+    "db:destroy": "dropdb db_class_lecture",
+    "db:init": "psql -f schema.sql db_class_lecture",
+    "db:seed": "psql -f seed.sql db_class_lecture",
+    "db:reset": "npm run db:destroy; npm run db:create && npm run db:init && npm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordanmateen/Postgres.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordanmateen/Postgres/issues"
+  },
+  "homepage": "https://github.com/jordanmateen/Postgres#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
