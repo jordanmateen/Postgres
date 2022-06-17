@@ -18,10 +18,10 @@ app.use(express.urlencoded());
 
 /**
  * Routing
- * GET -> /getAllEngineers: Returns all engineers from collection
- * GET -> /getEngineer/:id:  Returns only one engineer at a given id
+ * GET  ->  /getAllEngineers: Returns all engineers from collection
+ * GET  ->  /getEngineer/:id:  Returns only one engineer at a given id
  * POST -> /insert: Inserts and engineer into the collection
- * PUT -> /update/:id: Updates an engineers info at a given id 
+ * PUT  ->  /update/:id: Updates an engineers info at a given id 
  */
 
 app.get('/getAllEngineers', (req, res)=>{
