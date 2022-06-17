@@ -23,7 +23,7 @@ const db = pgPromise(config);
  *                   The last index in the array must be the id of which you want to update. 
  */
 
-module.exports = {
+const databaseLibrary = {
     getAll: async (table) => {
         return await db.any(`SELECT * FROM ${table}`)
     },
@@ -37,3 +37,5 @@ module.exports = {
         await db.none(`UPDATE ${table} SET name = $1, email = $2 WHERE id = $3`, data)
     }
 }
+
+module.exports = databaseLibrary
